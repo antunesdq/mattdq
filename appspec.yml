@@ -2,6 +2,14 @@ version: 0.0
 os: linux
 hooks:
   BeforeInstall:
-      - location: server_configs/scripts/before_install.sh
+      - location: scripts/before_install.sh
   AfterInstall:
-      - location: server_configs/scripts/after_install.sh
+      - location: scripts/after_install.sh
+  ApplicationStart:
+    - location: scripts/start_application.sh
+      timeout: 6000
+      runas: ec2-user
+  ApplicationStop:
+    - location: scripts/stop_application.sh
+      timeout: 6000
+      runas: ec2-user
