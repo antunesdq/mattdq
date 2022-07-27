@@ -1,7 +1,0 @@
-version: 0.0
-os: linux
-hooks:
-  BeforeInstall:
-      - location: server_configs/scripts/before_install.sh
-  AfterInstall:
-      - location: server_configs/scripts/after_install.sh
