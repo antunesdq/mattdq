@@ -28,4 +28,4 @@ RUN python djangobackend/manage.py migrate
 # 14 Expose port
 EXPOSE 8000 
 # 15 Start server
-CMD ["python", "djangobackend/manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "djangobackend/manage.py", "runserver", "localhost:8000"]
