@@ -6,9 +6,9 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Install Node
-RUN apt install nodejs -y
+RUN apt-get install nodejs
 # Install NPM
-RUN apt install npm -y
+RUN apt-get install npm
 
 COPY . /app
 
