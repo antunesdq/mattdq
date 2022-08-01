@@ -11,8 +11,7 @@ ENV PYTHONUNBUFFERED=1
 # 6 Update stuff.
 RUN apt-get update && apt-get install -y apt-transport-https
 # 7 Install Node
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-RUN sudo apt-get install -y nodejs
+RUN apt install nodejs -y
 # 8 Install NPM
 RUN apt install npm -y
 # 9
