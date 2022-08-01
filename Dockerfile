@@ -6,9 +6,9 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Install Node
-RUN yum install -y nodejs
+RUN apt install nodejs
 # Install NPM
-#RUN apt-get install npm
+RUN apt install npm
 
 COPY . /app
 
