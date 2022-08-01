@@ -1,3 +1,2 @@
-!/usr/bin/env bash
-
-exit()
+# Stop django application in background
+pkill -f runserver

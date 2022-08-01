@@ -3,8 +3,10 @@ os: linux
 hooks:
   BeforeInstall:
       - location: scripts/before_install.sh
+        runas: ec2-user
   AfterInstall:
       - location: scripts/after_install.sh
+        runas: ec2-user
   ApplicationStart:
     - location: scripts/start_application.sh
       timeout: 6000

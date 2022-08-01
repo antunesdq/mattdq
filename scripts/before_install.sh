@@ -1,6 +1,8 @@
-!/usr/bin/env bash
-
-sudo apt-get update
-sudo apt-get install -y python3 python-dev python3-pip 
-#pip install --user --upgrade virtualenv
-#sudo rm -rf /var/www/backend
+# Install Python --No need in ubuntu 22.04
+sudo apt install python3-pip -y
+# Install Node
+apt install nodejs -y
+# Install NPM
+apt install npm -y
+# Install React
+npm install -y
