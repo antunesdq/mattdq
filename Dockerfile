@@ -9,9 +9,9 @@ ENV PYTHONUNBUFFERED=1
 # Update stuff.
 RUN apt-get update && apt-get install -y apt-transport-https
 # Install Node
-RUN apt install nodejs
+RUN apt install nodejs -y
 # Install NPM
-RUN apt install npm
+RUN apt install npm -y
 
 COPY . /app
 
