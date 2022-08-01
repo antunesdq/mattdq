@@ -1,27 +1,31 @@
+# 1 
 FROM python:3
-
+# 2
 USER root
-
+# 3
 WORKDIR /app
-
+# 4
 ENV PYTHONDONTWRITEBYTECODE=1
+# 5
 ENV PYTHONUNBUFFERED=1
-# Update stuff.
+# 6 Update stuff.
 RUN apt-get update && apt-get install -y apt-transport-https
-# Install Node
+# 7 Install Node
 RUN apt install nodejs -y
-# Install NPM
+# 8 Install NPM
 RUN apt install npm -y
-
+# 9
 COPY . /app
 
-# Install React
+# 10 Install React
 RUN npm install --prefix ./djangobackend/reactfrontend -y
-# Install libaries
+# 11 Install libaries
 RUN pip install -r requirements.txt
-# Build React app
+# 12 Build React app
 RUN npm run build --prefix ./djangobackend/reactfrontend
-# Migrate database
+# 13 Migrate database
 RUN python djangobackend/manage.py migrate
-# Start app
+# 14 Expose port
+EXPOSE 8000 
+# 15 Start server
 RUN python djangobackend/manage.py runserver
