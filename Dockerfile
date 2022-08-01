@@ -11,7 +11,8 @@ ENV PYTHONUNBUFFERED=1
 # 6 Update stuff.
 RUN apt-get update && apt-get install -y apt-transport-https
 # 7 Install Node
-RUN apt install nodejs -y
+RUN curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+RUN sudo apt-get install -y nodejs
 # 8 Install NPM
 RUN apt install npm -y
 # 9
@@ -19,13 +20,15 @@ COPY . /app
 
 # 10 Install React
 RUN npm install --prefix ./djangobackend/reactfrontend -y
-# 11 Install libaries
+# 11 Upgrade pip
+RUN python -m pip install --upgrade pip
+# 12 Install libaries
 RUN pip install -r requirements.txt
-# 12 Build React app
+# 13 Build React app
 RUN npm run build --prefix ./djangobackend/reactfrontend
-# 13 Migrate database
+# 14 Migrate database
 RUN python djangobackend/manage.py migrate
-# 14 Expose port
+# 15 Expose port
 EXPOSE 8000 
-# 15 Start server
+# 16 Start server
 CMD ["python", "djangobackend/manage.py", "runserver", "0.0.0.0:8000"]
