@@ -1,3 +1,6 @@
 .vscode/*
 env/*
 steps.txt
+buildspec.yml
+appspec.yml
+scripts/*
