@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:186012808537:task-definition/mattdq:1",
+    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:186012808537:task-definition/mattdq:7",
     "containerDefinitions": [
         {
             "name": "mattdq",
@@ -7,12 +7,14 @@
             "cpu": 0,
             "portMappings": [
                 {
-                    "containerPort": 8000,
-                    "hostPort": 8000,
+                    "containerPort": 8081,
+                    "hostPort": 8081,
                     "protocol": "tcp"
                 }
             ],
             "essential": true,
+            "entryPoint": [],
+            "command": [],
             "environment": [],
             "mountPoints": [],
             "volumesFrom": [],
@@ -30,7 +32,7 @@
     "taskRoleArn": "arn:aws:iam::186012808537:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::186012808537:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 7,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -64,11 +66,14 @@
         "EC2",
         "FARGATE"
     ],
+    "runtimePlatform": {
+        "operatingSystemFamily": "LINUX"
+    },
     "requiresCompatibilities": [
         "FARGATE"
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2022-11-01T17:57:14.294000+01:00",
+    "registeredAt": "2022-11-02T20:51:44.198000+01:00",
     "registeredBy": "arn:aws:iam::186012808537:root"
 }

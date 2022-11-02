@@ -14,5 +14,6 @@ RUN python3 manage.py makemigrations
 
 RUN python3 manage.py migrate
 
+EXPOSE 8081
 
-CMD python3 manage.py runserver 0.0.0.0:80
+CMD python3 manage.py runserver 0.0.0.0:8081
