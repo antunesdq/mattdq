@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+  background-color: #1E1E1E;
+  min-height: 100vh;
+}
+
+.nav-menu ul {
+  height: 50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1E1E1E;
+  border-bottom: 1px solid #fff;
+  align-items: center;
+  display: flex;
+}
+
+.nav-menu > ul > li {
+  flex: 1;
+}
+
+.nav-menu > ul > li:first-child {
+  flex-grow: 3;
+}
+
+.nav-menu li {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.nav-menu li:not(:first-child) {
+  flex-grow: 1;  
+  border-left: 1px solid #fff;
+}
+
+.nav-menu a{
+  text-decoration: none;
+  font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-size: 24px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+.lang-ul {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.lang-ul li {
+  flex-grow: 1;
+}
+
+.lang-ul li:first-child {
+  margin-left: 0;
+}
+
+
+li a:hover {
+  background-color: black;
+}
+
+
+/* Links */
+.link-home {
+  color: white;
+}
+
+.link-portfolio {
+  color: #FF6666;
+}
+
+.link-blog {
+  color: #39B8FF;
+}
+
+.link-contact {
+  color: #E43CFF;
+}
+
+.link-cv {
+  color: #00FF47;
+}
+
+
+.lang-ul li a {
+  color: white;
+}
+
+
+.lang-active {
+  border-color: currentColor;
+}
+
+.first-name {
+  font-size: 36px;
+  margin-right: 48px; /* Adjust the value to control the space between the two chunks */
+
+}
+
+.last-name {
+  font-size: 22px;
+}
