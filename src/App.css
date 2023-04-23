@@ -97,12 +97,12 @@ li a:hover {
   border-color: currentColor;
 }
 
-.first-name {
+.link-home .first-name {
   font-size: 36px;
   margin-right: 48px; /* Adjust the value to control the space between the two chunks */
 
 }
 
-.last-name {
+.link-home .last-name {
   font-size: 22px;
 }

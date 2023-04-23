@@ -16,9 +16,18 @@ function App() {
   useEffect(() => {
     const navMenu = navMenuRef.current;
   
-    const handleClick = (event: Event) => { // Specify the event type here
-      if (event.target instanceof HTMLAnchorElement) {
-        const computedStyle = window.getComputedStyle(event.target);
+    const handleClick = (event: Event) => {
+      let targetElement: HTMLElement | null = null;
+
+      if (event.target instanceof HTMLSpanElement) {
+        targetElement = event.target.parentElement;
+      } else if (event.target instanceof HTMLAnchorElement) {
+        targetElement = event.target;
+      }
+
+      if (targetElement) {
+        const computedStyle = window.getComputedStyle(targetElement);
+        console.log(computedStyle.color);
         setColor(computedStyle.color);
       }
     };
